@@ -1,4 +1,4 @@
-This is ARM64 for macOS
+# ARM64 for macOS
 
 ```
 make

@@ -77,20 +77,6 @@ solve(Sum) :-
     maplist(sum_invalid_in_range, Ranges, Sums),
     sum_list(Sums, Sum).
 
-% Test with example
-test_example :-
-    Ranges = [11-22,95-115,998-1012,1188511880-1188511890,222220-222224,
-               1698522-1698528,446443-446449,38593856-38593862,565653-565659,
-               824824821-824824827,2121212118-2121212124],
-    maplist(invalid_ids_in_range, Ranges, InvalidLists),
-    flatten(InvalidLists, AllInvalid),
-    sort(AllInvalid, SortedInvalid),
-    sum_list(SortedInvalid, Sum),
-    format('Invalid IDs: ~w~n', [SortedInvalid]),
-    format('Expected: [11,22,99,111,999,1010,1188511885,222222,446446,38593859,565656,824824824,2121212121]~n'),
-    format('Sum: ~d~n', [Sum]),
-    format('Expected sum: 4174379265~n').
-
 % Main entry point
 main :-
     solve(Sum),
