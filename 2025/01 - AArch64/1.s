@@ -1,6 +1,3 @@
-# Advent of Code 2025 - Day 1: Secret Entrance
-# Assembly solution (ARM64, macOS)
-# Counts how many times the dial points at 0 after rotations
 
 .section __DATA,__data
 filename:
